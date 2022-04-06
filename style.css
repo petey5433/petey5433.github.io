@@ -1,4 +1,12 @@
-#banner{
+body {
+  background-color: white;
+  font-family: sans-serif;
+}
+
+.leftnavigation{
+  position: left;
+}
+#bannertitle{
   background-image: url("https://images.unsplash.com/photo-1605132670633-90aba6347434?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2662&q=80");
   background-size: cover;
   height: 500px;
