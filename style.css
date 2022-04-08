@@ -17,6 +17,12 @@ body{
 #introduction h3, #introduction p, ul {
     color:black;
 }
+dl {
+    padding:10px
+}
+li {
+    margin-top:10px;
+}
 #content, #introduction {
     margin: 0 0 0 200px;
     padding: 50px;
