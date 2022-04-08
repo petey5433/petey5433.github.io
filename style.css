@@ -15,9 +15,17 @@ body{
     position: relative;
 }
 
+#bannertitle {
+    margin-left:200px;
+
+}
+
 .wrapper {
   display: flex;
   position: relative;
+}
+.wrapper nav {
+    z-index:100;
 }
 
 .wrapper .sidebar {
