@@ -75,7 +75,7 @@ li {
   border: 3px #392426;
 }
 
-#footer {
+.footer {
   background: black;
   height: 100px;
   position: fixed;
