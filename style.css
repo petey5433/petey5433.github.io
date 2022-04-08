@@ -14,7 +14,7 @@ body{
     font-color: black;
     position: relative;
 }
-#content h3, #content p {
+#introduction h3, #introduction p {
     color:black;
 }
 #content, #introduction {
