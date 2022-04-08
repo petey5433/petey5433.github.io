@@ -78,4 +78,14 @@ li {
 #footer {
   text-align: bottom;
   color: black !important;
+  background: black;
+  height: 100px;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  text-align: center;
+}
+
+#footer p {
+  padding: 10px
 }
