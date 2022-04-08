@@ -21,6 +21,10 @@ body{
 
 }
 
+#sidebar ul {
+    padding:40px;
+}
+
 #bannertitle {
     margin-left:200px;
 
