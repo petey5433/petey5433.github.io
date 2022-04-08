@@ -75,13 +75,13 @@ li {
   border: 3px #392426;
 }
 
-.footer {
-  background: black;
-  height: 100px;
-  position: fixed;
-  width: 100vw;
-  bottom: 0;
+#footer {
   text-align: center;
+  background: black;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 50px;
 }
 
 #footer p {
