@@ -76,6 +76,7 @@ li {
   margin: 0 auto;
 }
 
-p{
-color: white;
+#footer p {
+  display: flex;
+  position: relative;
 }
