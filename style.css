@@ -17,7 +17,7 @@ body{
 #content h3, #content p {
     color:black;
 }
-#content {
+#content, #introduction {
     margin: 0 0 0 200px;
     padding: 50px;
 
