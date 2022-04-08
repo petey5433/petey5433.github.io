@@ -14,7 +14,9 @@ body{
     font-color: black;
     position: relative;
 }
-
+#content h3, #content p {
+    color:black;
+}
 #content {
     margin: 0 0 0 200px;
     padding: 50px;
