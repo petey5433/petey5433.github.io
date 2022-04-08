@@ -15,7 +15,7 @@ body{
     position: relative;
 }
 #introduction h3, #introduction p, ul {
-    color:black;
+    color:black !important;
 }
 dl {
     padding:10px
