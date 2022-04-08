@@ -76,8 +76,6 @@ li {
 }
 
 #footer {
-  text-align: bottom;
-  color: black !important;
   background: black;
   height: 100px;
   position: fixed;
@@ -87,5 +85,6 @@ li {
 }
 
 #footer p {
-  padding: 10px
+  padding: 10px;
+  color: black !important;
 }
