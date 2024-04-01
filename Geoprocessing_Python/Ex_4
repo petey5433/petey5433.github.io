@@ -1,0 +1,44 @@
+#Anna Peterson GEOG 6180
+#Exercise 4, Assignment 3
+
+#Save python code as scripts
+
+##path = "C:/data/part1/final"
+##pathlist = path.split("/")
+##lastpath = pathlist[-1]
+##print(lastpath)
+
+#Conditional Statements
+
+##import random
+##p = random.randint(1,6)
+##if p == 6:
+##    print("You win!")
+##elif p == 5:
+##    print("Try again!")
+##else:
+##    print("You lose!")
+
+#loops
+
+#while
+##i = 0
+##while i <= 10:
+##    print(i)
+##    i += 1
+
+#for
+##numbers = [1,2,3,4,5]
+##for number in numbers:
+##    print(number)
+
+# Name: Anna Peterson
+# Date: September 12, 2022
+# Description: This script demonstates how to break a loop
+
+import math
+for i in list(range(1000,0,-1)):
+    root = math.sqrt(i)
+##    if root == int(root): # This evaluates whether the root is an integer.
+##        print(i)
+##        break
