@@ -1,0 +1,123 @@
+CREATE TABLE atmosphere ( body varchar(15),
+  NAIFID varchar,
+  Carbon_Dioxide numeric, 
+  Nitrogen numeric, 
+  Oxygen numeric,
+  Argon numeric,
+  Methane numeric, 
+  Sodium numeric, 
+  Hydrogen numeric, 
+  Helium numeric, 
+  Other numeric
+  );
+
+CREATE TABLE astronomical_spectra ( body varchar(15),
+  NAIFID varchar,
+  type varchar(15),
+  UT_Start date,
+  Mid_Julian_Date numeric, 
+  Exposure_Duration numeric, 
+  Resolution numeric,
+  Wavelength varchar,
+  Observer varchar, 
+  Response_Corrected varchar(2), 
+  Flux_Calibrated varchar(2), 
+  Flat_Fielded varchar(2),
+  ld numeric );
+
+ALTER TABLE atmosphere ADD PRIMARY KEY (naifid);
+ALTER TABLE astronomical_spectra
+ADD PRIMARY KEY (ld),
+ADD FOREIGN KEY (naifid) REFERENCES atmosphere(naifid);
+
+CREATE TABLE craters ( body varchar(15),
+  ID varchar,
+  Type varchar,
+  Crater varchar, 
+  Crater_Size numeric,
+  Body_Diameter numeric, 
+  Ratio numeric, 
+  PRIMARY KEY (Crater) );
+
+CREATE TABLE NAIFID( Predefined_macros varchar(20), 
+  Name varchar(15),
+  ID numeric,
+  PRIMARY KEY (ID)
+  );
+
+CREATE TABLE Geologic_units( FID numeric,
+  Primary_body varchar(15), 
+  NAIFID varchar,
+  UnitName varchar, 
+  UnitSymbol varchar(4), 
+  Area numeric,
+  PRIMARY KEY (FID) );
+
+CREATE TABLE primary_body ( Planet varchar,
+  NAIFID varchar,
+  distance_sun decimal(6,2), 
+  period decimal(6,2), 
+  orbital_speed decimal(6,3), 
+  inclination_orbit decimal(6,2), 
+  eccentricity decimal(4,2), 
+  diameter int NOT NULL,
+  mass decimal(8,3), 
+  escape_velocity decimal(5,1), 
+  orbiting_bodies int NOT NULL, 
+  temperature int NOT NULL, 
+  atmosphere varchar, 
+  PRIMARY KEY (Planet)
+);
+
+CREATE TABLE orbiting_bodies( Name varchar,
+  ID varchar, 
+  system_name varchar, 
+  type varchar, 
+  yr_discovered numeric, 
+  discoverer varchar, 
+  distance int NOT NULL, 
+  diameter decimal(11,2),
+  orbital_period decimal(11,2), 
+  PRIMARY KEY (Name)
+);
+
+CREATE TABLE solar_spectra( star varchar,
+  planet varchar,
+  ID varchar,
+  description varchar,
+  meta varchar, 
+  custom_labels varchar, 
+  datafile varchar, 
+  default_selections varchar, 
+  reference varchar, 
+  obs_type varchar, 
+  wavelength varchar,
+  type varchar
+  PRIMARY KEY (ID) );
+
+CREATE TABLE struc ( FID int NOT NULL,
+  object varchar, 
+  Struc_type varchar, 
+  NAIFID varchar, 
+  PRIMARY KEY (FID) );
+
+CREATE TABLE wms_layers( target varchar,
+  primary_body varchar, 
+  layer_name varchar, 
+  projection varchar, 
+  control_network varchar, 
+  layer_type varchar,
+  URL varchar, 
+  map_filepath varchar, 
+  layer varchar,
+  units varchar,
+  format varchar, 
+  transparency varchar, 
+  left_bound decimal(9,1), 
+  right_bound decimal(9,1), 
+  top_bound decimal(9,1),
+  bottom_bound decimal(9,1), 
+  primary_layer varchar, 
+  citation varchar,
+  PRIMARY KEY (target)
+);
